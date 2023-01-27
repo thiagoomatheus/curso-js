@@ -14,3 +14,23 @@ let usuario = {
     senha: 123456
 }
 console.log(usuario);
+
+//Criando arrays
+
+let familia = ['Luiz', 56, 'Sorocaba'];
+
+console.log(familia[0]);
+
+// Criando funçções
+
+let parentesco = 'pai';
+
+function alteraParentesco(parentescoInserido) {
+    parentesco = parentescoInserido
+};
+
+console.log(parentesco);
+
+alteraParentesco("mãe");
+
+console.log(parentesco);
