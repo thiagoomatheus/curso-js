@@ -7,7 +7,8 @@
 //let nome = 'Thiago';
 //console.log(nome);
 
-//Criando obejtos
+/*--------------------
+Criando obejtos
 
 let usuario = {
     email: 'asdalaksl@gmail.com',
@@ -19,9 +20,10 @@ console.log(usuario);
 
 let familia = ['Luiz', 56, 'Sorocaba'];
 
-console.log(familia[0]);
+console.log(familia[0]);*/
 
-// Criando funçções
+/* -------------------
+Criando funções
 
 let parentesco = 'pai';
 
@@ -33,4 +35,23 @@ console.log(parentesco);
 
 alteraParentesco("mãe");
 
-console.log(parentesco);
+console.log(parentesco);*/
+
+// Mini-projeto - Alterando valores de variáveis
+
+let a = 'vermelho';
+let b = 'azul'
+
+console.log(a);
+console.log(b);
+
+// a = 'azul';
+// b = 'vermelho'; - Eu fiz dessa forma, mas a forma correta é:
+
+c = a;
+
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
