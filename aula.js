@@ -261,3 +261,169 @@ function exibirTipo(limite) {
 }
 
 */
+
+/*------------------
+
+//Mini-Projeto 6 - Encontre o String
+
+Não consegui fazer muito bem
+
+const filme = {
+    titulo : 'Vingadores',
+    ano : 2018,
+    criador : 'Robin',
+    personagem : 'Thor'
+};
+
+exibirPropriedades(filme)
+
+function exibirPropriedades(obj) {
+    for (let prop in obj) {
+        if (typeof obj[prop] === 'string') {
+            console.log(prop, obj[prop]);
+        }
+    }
+}
+
+*/
+
+/* --------------------
+
+//Mini-Projeto 7 - Múltiplos de 3 e 5
+
+somar(5);
+
+function somar(limite) {
+    let multiploTres = 0;
+    let multiploCinco = 0;
+    
+    for (i = 0; i <= limite; i++) {
+        if (i % 3 === 0) {
+            multiploTres += i
+        }
+        else if (i % 5 === 0) {
+            multiploCinco += i
+        }
+    }
+    console.log(multiploTres + multiploCinco);
+}
+
+//Cheguei perto da resolução, só não consegui fazer adicionar cada numero multiplo. No vídeo a solução foi usar o operador += que soma o valor já existente ao novo valor e assim por diante
+
+*/
+
+/* ------------------------
+
+//Mini-Projeto 8 - Média Nota Escolar
+
+const array = [90,90,90]
+
+console.log(mediaDoAluno(array));
+
+function mediaDoAluno(notas) {
+    let somaNota = 0;
+    
+    for (let valor in array) {
+        somaNota += array[valor];
+        media = somaNota / array.length; // Muito importante! Para obter a quantidade de itens dentro de um array usar o .length
+    }
+    if (media >= 90) {
+        console.log('A');
+    }
+    else if (media >= 80) {
+        console.log('B');
+    }
+    else if (media >= 70) {
+        console.log('C');
+    }
+    else if (media >= 60) {
+        console.log('D');
+    }
+    else {
+        console.log('E')
+    }
+}
+
+*/
+
+/* --------------------
+
+//Mini-Projeto 8 - Contador de Asteriscos
+
+exibirAsteriscos(10);
+
+function exibirAsteriscos(linhas) {
+   Forma mais simples
+
+    asterisco = '';
+    for (i = 1; i <= linhas; i++) {
+        asterisco += '*' ; 
+        console.log(i, asterisco);
+    }
+
+    --------------
+
+    Forma mais avançada - é utilizado um loop dentro de um loop.
+
+    for (linha = 0; linha <= linhas; linha++) {
+        let asterisco = '';
+        for (i = 0; i <= linha; i++) {
+            asterisco += '*'
+        }
+        console.log(asterisco);
+    }
+}
+
+*/
+
+/* -------------------------
+
+// Mini-projeto 9 - Números primos
+
+exibirNumerosPrimos(1000);
+
+function exibirNumerosPrimos(limite) {
+    for (numero = 2; numero <= limite; numero++) {
+
+        /* Jeito que fiz, mas apresentava erros
+
+        if (numero === 2) {
+            console.log(numero); 
+        }
+        else if (numero === 3) {
+            console.log(numero); 
+        }
+        else if (numero === 5) {
+            console.log(numero); 
+        }
+        else if (numero === 7) {
+            console.log(numero); 
+        }
+
+        else if (numero % 2 !==0 && numero % 3 !==0 && numero % 5 !==0 && numero % 7 !==0) {
+            console.log(numero);
+        }
+
+        //Jeito no vídeo, muito mais simples
+
+        calcularPrimo(numero)
+
+        if (calcularPrimo(numero)) {
+            console.log(numero);
+        }
+
+    }
+}
+
+//Foi feito uma outra função pelo fato que as funções devem realizar uma ação e nesse caso estavamos tendo duas ações: calucular o número primo e exibir o numero primo.
+
+function calcularPrimo(numero) {
+    for (divisor = 2; divisor < numero; divisor++) {
+        if (numero % divisor ===0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+*/
