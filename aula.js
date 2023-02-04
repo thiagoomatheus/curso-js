@@ -427,3 +427,56 @@ function calcularPrimo(numero) {
 }
 
 */
+
+/* -------------------------
+
+// Factori Functions
+
+function criaCelular(marcaCelular,tamanhoTela,capacidadeBateria,pontuacaoBenchmark) {
+    return {
+        marcaCelular : marcaCelular,
+        tamanhoTela : tamanhoTela,
+        capacidadeBateria : capacidadeBateria,
+        pontuacaoBenchmark : pontuacaoBenchmark
+    }
+}
+
+const celular001 = criaCelular('Samsung',6.8, 5000, 770000);
+console.log(celular001);
+
+const celular002 = criaCelular('Apple',6.0, 4500, 950000);
+console.log(celular002);
+
+//Resolvi fazer uma função para comparar os dois e deu certo
+
+function comparaCelular(celular1, celular2) {
+    let pontuacao1 = celular001.pontuacaoBenchmark;
+    let pontuacao2 = celular002.pontuacaoBenchmark;
+    celular1 = celular001.marcaCelular;
+    celular2 = celular002.marcaCelular
+
+    if (pontuacao1 > pontuacao2) {
+        console.log(celular1,'é melhor');
+    }
+    else {
+        console.log(celular2,'é melhor');
+    }
+}
+
+comparaCelular(celular001,celular002)
+
+*/
+
+//Contructor Functions
+
+function Cliente(nomeCompleto,idade,email) {
+    this.nomeCompleto = nomeCompleto,
+    this.idade = idade,
+    this.email = email
+}
+
+let cliente1 = new Cliente('João Rodrigues da Silva',59,'joaors@gmail.com')
+console.log(cliente1);
+
+let cliente2 = new Cliente('Maria Santos Silva',55,'mariass@gmail.com');
+console.log(cliente2);
