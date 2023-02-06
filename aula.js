@@ -467,6 +467,8 @@ comparaCelular(celular001,celular002)
 
 */
 
+/* ------------------------
+
 //Contructor Functions
 
 function Cliente(nomeCompleto,idade,email) {
@@ -480,3 +482,13 @@ console.log(cliente1);
 
 let cliente2 = new Cliente('Maria Santos Silva',55,'mariass@gmail.com');
 console.log(cliente2);
+
+*/
+
+//Math
+
+let a = Math.floor(Math.random() * 1000);
+
+
+console.log(a);
+
