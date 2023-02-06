@@ -456,10 +456,10 @@ function comparaCelular(celular1, celular2) {
     celular2 = celular002.marcaCelular
 
     if (pontuacao1 > pontuacao2) {
-        console.log(celular1,'é melhor');
+        console.log(`${celular1} é melhor`); //Usando literal template
     }
     else {
-        console.log(celular2,'é melhor');
+        console.log(`${celular2} é melhor`); //Usando literal template
     }
 }
 
@@ -485,6 +485,8 @@ console.log(cliente2);
 
 */
 
+/* ---------------
+
 //Math
 
 let a = Math.floor(Math.random() * 1000);
@@ -492,3 +494,4 @@ let a = Math.floor(Math.random() * 1000);
 
 console.log(a);
 
+*/
