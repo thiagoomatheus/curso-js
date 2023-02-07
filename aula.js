@@ -495,3 +495,27 @@ let a = Math.floor(Math.random() * 1000);
 console.log(a);
 
 */
+
+/* -----------------
+
+//Date
+
+const data1 = new Date();
+console.log(data1);
+
+const data2 = new Date(2001,1,17,15,30);
+console.log(data2);
+
+data1.setMonth(11);
+console.log(data1);
+
+data2.setFullYear(2030);
+console.log(data2);
+
+let dia1 = data1.getDate();
+console.log(dia1); // Retorna o dia do mês = 7
+
+let dia2 = data2.getDay();
+console.log(dia2); // Retorna o dia da semana = 6
+
+*/
