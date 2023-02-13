@@ -591,6 +591,8 @@ comparaEndereco(endereco1,endereco2)
 
 */
 
+/* --------------
+
 // Mini-Projeto 13 - Montador de Postagem de blog
 
 function montaPostagem(titulo,mensagem,autor,visualizacoes,autorComentario,mensagemComentario,estaAoVivo) {
@@ -607,3 +609,57 @@ function montaPostagem(titulo,mensagem,autor,visualizacoes,autorComentario,mensa
 const postagem001 = new montaPostagem('Hello Word',`Olá Mundo! Essa é minha primeira postagem no blog. Fico feliz em ter você aqui. Deixe um comentário abaixo!`,`thiago`,1,'jhon',`Parabéns pelo post`,true);
 
 console.log(postagem001);
+
+*/
+
+/* ----------------------
+
+// Mini-projeto 14 - Faixas de preços
+
+function CriaFaixaPreco(tooltip,minimo,maximo) {
+    this.tooltip = tooltip,
+    this.minimo = minimo,
+    this.maximo = maximo
+}
+
+let faixaPreço = [
+    new CriaFaixaPreco ('Até R$ 700,00',0,700),
+    new CriaFaixaPreco ('Até R$ 1000,00',701,1000),
+    new CriaFaixaPreco ('Maior R$ 1000,00',1001,99999999999)
+]
+
+console.log(faixaPreço);
+
+*/
+
+// Manipulando arrays - Tipos de Referência
+
+const produtos = [
+    {id: 1, nome: 'celular', valor: 1000},
+    {id: 2, nome: 'notebook', valor: 3000},
+    {id: 3, nome: 'pc', valor: 2500},
+    {id: 4, nome: 'tv', valor: 1500},
+    {id: 5, nome: 'tablet', valor: 1300}
+]
+
+const produtos2 = [
+    {id: 100, nome: 'aspirador', valor: 300},
+    {id: 101, nome: 'wap', valor: 500}
+]
+
+produtos.unshift({id:0, nome: 'capinha', valor: 15});
+produtos.push({id:6, nome: 'monitor', valor: 700})
+
+console.log(produtos);
+
+console.log(produtos.find((produto) => {
+    return produto.valor <= 700;
+}));
+
+const combinado = produtos.concat(produtos2)
+console.log(combinado);
+
+const promocao = combinado.slice(3,6)
+console.log(promocao);
+
+produtos[3].valor = 3000;
