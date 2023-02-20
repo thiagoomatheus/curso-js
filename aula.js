@@ -183,7 +183,7 @@ function max(numero1, numero2) {
 
  /*-----------------------
 
- //Mini-projeto 4 - Medidor de velocidade - não consegui fazer muito bem, precisei da ajuda do vídeo
+//Mini-projeto 4 - Medidor de velocidade - não consegui fazer muito bem, precisei da ajuda do vídeo
 
 verificarVelocidade(85);
 function verificarVelocidade(velocidade) {
@@ -223,9 +223,9 @@ function verificarVelocidade(velocidade) {
     }
 }
 
-*/
+*/ 
 
-/*
+/* -------------------
 
 // Mini-projeto 5 - Par ou ímpar
 
@@ -348,7 +348,7 @@ function mediaDoAluno(notas) {
 
 /* --------------------
 
-//Mini-Projeto 8 - Contador de Asteriscos
+//Mini-Projeto 9 - Contador de Asteriscos
 
 exibirAsteriscos(10);
 
@@ -378,7 +378,7 @@ function exibirAsteriscos(linhas) {
 
 /* -------------------------
 
-// Mini-projeto 9 - Números primos
+// Mini-projeto 10 - Números primos
 
 exibirNumerosPrimos(1000);
 
@@ -549,7 +549,7 @@ exibirEndereco(endereco);
 
 /* ----------------------
 
-Muito válido esse projeto. Aprendi a comparar os valores de dois objetos. O prefoessr fez de outra forma que também serve para situação de validação.
+// Muito válido esse projeto. Aprendi a comparar os valores de dois objetos. O prefoessr fez de outra forma que também serve para situação de validação.
 
 // Mini-Projeto 12 - Encontre a igualdade de Objetos
 
@@ -668,6 +668,9 @@ produtos[3].valor = 3000;
 
 */
 
+
+/*------------------------
+
 // Imput - recebendo dados do usuário
 
 let idadeUsuario = parseInt(prompt('Qual a sua idade?'));
@@ -680,3 +683,9 @@ function comparaIdadeUsuario(idade) {
 }
 
 comparaIdadeUsuario(idadeUsuario)
+
+*/
+
+// Mini Projeto 15 - Segurança Virtual
+
+//Ver na pasta
