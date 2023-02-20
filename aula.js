@@ -632,6 +632,8 @@ console.log(faixaPreço);
 
 */
 
+/* -----------------
+
 // Manipulando arrays - Tipos de Referência
 
 const produtos = [
@@ -663,3 +665,18 @@ const promocao = combinado.slice(3,6)
 console.log(promocao);
 
 produtos[3].valor = 3000;
+
+*/
+
+// Imput - recebendo dados do usuário
+
+let idadeUsuario = parseInt(prompt('Qual a sua idade?'));
+function comparaIdadeUsuario(idade) {
+    if (idade >= 18) {
+        alert('Você é maior de idade')
+    } else {
+        alert('Você é menor de idade')
+    }
+}
+
+comparaIdadeUsuario(idadeUsuario)
