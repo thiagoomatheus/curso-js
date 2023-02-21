@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso JS</title>
+    <title>Segurança Virtual</title>
     <script src="aula.js"></script>
 </head>
 <body>
-    <h1>DevAprender</h1>
+    <h1>Festa VIP</h1>
+    <h2>Bem vindo a festa Senhor(a):</h2>
+    <input type="text" name="nome-usuario" id="nomeusuario" value="" placeholder="Digite seu nome">
+    <h2>Quem te convidou para essa festa?</h2>
+    <input type="text" name="nome-anfitriao" id="nomeanfitriao" placeholder="Quem te convidou?">
+    <button id="validacao" onclick="validaConvidado(document.getElementById('nomeanfitriao').value)">Verificar se posso entrar </button>
+    <h1>Você está permitido entrar?</h1>
+    <p id="resultado-validacao">Pesquisando ...</p>
 </body>
 </html>
