@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid red;
     list-style: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,7 +11,7 @@ body {
     grid-template-columns: minmax(300px, 500px);
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, rgb(255, 112, 112), rgb(101, 49, 223));
+    background-image: linear-gradient(to right, rgb(172, 35, 69), rgb(35, 16, 78));
 }
 
 h1 {
@@ -62,20 +61,26 @@ h1 {
 
 .tarefas {
     display: grid;
-    grid-template-columns: 1fr 30px 30px;
+    grid-template-columns: 1fr 40px 40px;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 50px;
     margin-bottom: 5px;
     padding-left: 10px;
     background: white;
     border-bottom: 3px solid #23104e;
 }
 
-.tarefas button {
+.tarefas span {
     display: grid;
     align-items: center;
-    background: white;
+    justify-items: center;
+    background: transparent;
     height: 100%;
-    font-size: 1.3em;
+    font-size: 1.5em;
+}
+
+.concluido {
+    color: white;
+    background-color: #23104e;
 }
