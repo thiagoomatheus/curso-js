@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu plano</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Simples assim, preço baseado no tráfego</h1>
+            <p>Experimente por 30 dias.</p>
+            <p>Não requer cartão de crédito.</p>
+        </header>
+        <section id="planos">
+            <section id="escolha-plano">
+                <p>100K PAGEVIEW</p>
+                <input type="range" name="plano" id="plano" min="1" max="5" value="3">
+                <div id="valor-plano">
+                    <p id="preco">R$ <span>16.00</span></p>
+                    <p>/ mês</p>
+                </div>
+                <div>
+                    <span>Plano Mensal</span>
+                    <button>selecione</button>
+                    <span>Plano Anual <span>25% desconto</span></span>
+                </div>
+            </section>
+            <section id="beneficios">
+                <ul>
+                    <li>Sites ilimitados</li>
+                    <li>100% dos dados protegidos</li>
+                    <li>Relatórios por email</li>
+                </ul>
+                <button>Experimente Agora</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
