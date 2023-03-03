@@ -20,13 +20,16 @@
                 <p>100K PAGEVIEW</p>
                 <input type="range" name="plano" id="plano" min="1" max="5" value="3">
                 <div id="valor-plano">
-                    <p id="preco">R$ <span>16.00</span></p>
+                    <p id="preco">R$<span>16.00</span></p>
                     <p>/ mês</p>
                 </div>
-                <div>
+                <div id="escolha-periodo">
                     <span>Plano Mensal</span>
-                    <button>selecione</button>
-                    <span>Plano Anual <span>25% desconto</span></span>
+                    <label for="">
+                        <input type="checkbox" name="Plano Mensal/Plano Anual" id="periodo-plano">
+                    </label>
+                    <span>Plano Anual</span>
+                    <span id="desconto">-25%</span>
                 </div>
             </section>
             <section id="beneficios">

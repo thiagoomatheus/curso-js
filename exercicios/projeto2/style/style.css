@@ -133,6 +133,7 @@ main header p {
     height: 10px;
     border-radius: 10px;
     margin-top: 20px;
+    cursor: ew-resize;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -182,6 +183,55 @@ input[type=range]::-moz-range-progress {
     font-size: 1.5em;
     font-weight: 800;
     color: var(--Dark-Desaturated-Blue);
+}
+
+#escolha-periodo {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 80px 50px 70px 30px;
+    align-items: center;
+    justify-items: start;
+    column-gap: 5px;
+}
+
+#escolha-periodo span {
+    font-size: 0.9em;
+}
+
+#escolha-periodo #desconto {
+    font-size: 0.8em;
+    padding: 2px 4px;
+    border-radius: 5px;
+    background: var(--Light-Grayish-Red);
+    color: var(--Light-Red);
+    font-weight: 800;
+}
+
+#escolha-periodo label input[type="checkbox"] {
+    appearance: none;
+    background: var(--Light-Grayish-Blue-Toggle);
+    height: 23px;
+    width: 45px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    transition: .4s;
+}
+
+#escolha-periodo label input[type="checkbox"]::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#escolha-periodo label input[type="checkbox"]:checked {
+    background: var(--Strong-Cyan);
+    justify-items: end;
 }
 
 #beneficios {
