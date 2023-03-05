@@ -128,12 +128,12 @@ main header p {
 #escolha-plano input[type= range] {
     -webkit-appearance: none;
     border: none;
-    background: var(--Light-Grayish-Blue);
+    background: linear-gradient(to left, var(--Light-Grayish-Blue) 50%, var(--Strong-Cyan) 50%);
     width: 70%;
     height: 10px;
     border-radius: 10px;
     margin-top: 20px;
-    cursor: ew-resize;
+    cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {
