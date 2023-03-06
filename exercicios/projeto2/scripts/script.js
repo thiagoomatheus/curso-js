@@ -3,12 +3,14 @@ let valorRange = 3;
 let pageview = document.querySelector("#escolha-plano p");
 let preco = document.querySelector("#preco span");
 
+let tipoPlano = document.querySelector("#periodo-plano");
+
 range.addEventListener("input", function () {
     valorRange = parseInt(range.value);
-    
+
     marcaProgressoRange(valorRange)
     inserePlano(valorRange)
-    inserePreco(valorRange)
+    inserePreco()
 })
 
 function inserePlano(input) {
@@ -30,22 +32,26 @@ function inserePlano(input) {
     }
 }
 
-function inserePreco(input) {
-    if (input === 1) {
-        preco.textContent = "8.00";
+function inserePreco() {
+
+    inserePrecoMensal(valorRange);
+
+    if (tipoPlano.checked === true) {
+        inserePrecoAnual(valorRange)
     }
-    else if (input === 2) {
-        preco.textContent = "12.00";
-    }
-    else if (input === 3) {
-        preco.textContent = "16.00";
-    }
-    else if (input === 4) {
-        preco.textContent = "24.00";
-    }
-    else {
-        preco.textContent = "36.00";
-    }
+
+    tipoPlano.addEventListener("click", function    () { 
+        
+        if (tipoPlano.checked === true) {
+            inserePrecoAnual(valorRange);
+        }
+
+        if (tipoPlano.checked !== true) {
+            inserePrecoMensal(valorRange)
+        }
+     
+    })
+        
 }
 
 function marcaProgressoRange(input) {
@@ -63,5 +69,46 @@ function marcaProgressoRange(input) {
     }
     else {
         range.style.cssText = "background: var(--Strong-Cyan)";
+    }
+}
+
+function inserePrecoMensal(input) {
+    if (input === 1) {
+        preco.textContent = "8.00";
+    }
+    else if (input === 2) {
+        preco.textContent = "12.00";
+    }
+    else if (input === 3) {
+        preco.textContent = "16.00";
+    }
+    else if (input === 4) {
+        preco.textContent = "24.00";
+    }
+    else {
+        preco.textContent = "36.00";
+    }
+}
+
+function inserePrecoAnual(input) {
+    if (input === 1) {
+        let precoAnual = parseFloat(((8.00 * 12.00) - ((8.00 * 12.00) * 0.25)));
+        preco.textContent = `${precoAnual.toFixed(2)}`;
+    }
+    else if (input === 2) {
+        let precoAnual = parseFloat(((12.00 * 12.00) - ((12.00 * 12.00) * 0.25)));
+        preco.textContent = `${precoAnual.toFixed(2)}`;
+    }
+    else if (input === 3) {
+        let precoAnual = parseFloat(((16.00 * 12.00) - ((16.00 * 12.00) * 0.25)));
+        preco.textContent = `${precoAnual.toFixed(2)}`;
+    }
+    else if (input === 4) {
+        let precoAnual = parseFloat(((24.00 * 12.00) - ((24.00 * 12.00) * 0.25)));
+        preco.textContent = `${precoAnual.toFixed(2)}`;
+    }
+    else {
+        let precoAnual = parseFloat(((36.00 * 12.00) - ((36.00 * 12.00) * 0.25)));
+        preco.textContent = `${precoAnual.toFixed(2)}`;
     }
 }
