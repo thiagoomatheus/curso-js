@@ -5,11 +5,14 @@ let preco = document.querySelector("#preco span");
 
 let tipoPlano = document.querySelector("#periodo-plano");
 
+let textoPeriodo = document.querySelector("#periodo");
+
+inserePreco()
+
 range.addEventListener("input", function () {
     valorRange = parseInt(range.value);
-
-    marcaProgressoRange(valorRange)
-    inserePlano(valorRange)
+    marcaProgressoRange(valorRange);
+    inserePlano(valorRange);
     inserePreco()
 })
 
@@ -38,16 +41,19 @@ function inserePreco() {
 
     if (tipoPlano.checked === true) {
         inserePrecoAnual(valorRange)
+        textoPeriodo.textContent = "/ ano";
     }
 
-    tipoPlano.addEventListener("click", function    () { 
+    tipoPlano.addEventListener("click", function () { 
         
         if (tipoPlano.checked === true) {
             inserePrecoAnual(valorRange);
+            textoPeriodo.textContent = "/ ano";
         }
 
         if (tipoPlano.checked !== true) {
             inserePrecoMensal(valorRange)
+            textoPeriodo.textContent = "/ mês";
         }
      
     })

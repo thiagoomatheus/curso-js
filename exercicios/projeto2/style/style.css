@@ -75,10 +75,6 @@ body, html {
     height: 100vh;
 }
 
-/* body {
-    background: var(--Very-Pale-Blue);
-} */
-
 main {
     display: grid;
     grid-template-columns: minmax(300px, 800px);
@@ -180,7 +176,7 @@ input[type=range]::-moz-range-progress {
 #valor-plano {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 1fr 70px;
     column-gap: 10px;
     align-items: center;
 }
@@ -194,7 +190,7 @@ input[type=range]::-moz-range-progress {
 #escolha-periodo {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 80px 50px 70px 30px;
+    grid-template-columns: 90px 50px 90px 30px;
     align-items: center;
     justify-items: start;
     column-gap: 5px;
@@ -252,7 +248,7 @@ input[type=range]::-moz-range-progress {
     justify-items: center;
     row-gap: 5px;
     padding: 10px 0;
-    border-top: 1px solid var(--Very-Pale-Blue);
+    border-top: 2px solid var(--Light-Grayish-Blue-Toggle);
 }
 
 #beneficios ul {
@@ -268,9 +264,87 @@ input[type=range]::-moz-range-progress {
 }
 
 #beneficios button {
-    margin: 10px 0;
     font-size: 1.1em;
     color: var(--Pale-Blue);background: var(--Dark-Desaturated-Blue);
     width: 200px;
+    height: 50px;
     border-radius: 20px;
+    border: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.459);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    main header h1, #valor-plano #preco {
+        font-size: 2em;
+    }
+
+    main header p, #escolha-plano p {
+        font-size: 1.2em;
+    }
+
+    #planos {
+        display: grid;
+        grid-template-rows: 220px 150px;
+    }
+
+    #escolha-plano {
+        display: grid;
+        grid-template-areas: 
+        "pageview valor"
+        "plano plano"
+        "toggle toggle"
+        ;
+        justify-items: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    #escolha-plano p {
+        grid-area: pageview;
+    }
+
+    #valor-plano {
+        grid-area: valor;
+        grid-template-areas: "preco periodo";
+    }
+
+    #valor-plano #preco {
+        grid-area: preco;
+    }
+
+    #valor-plano #periodo {
+        grid-area: periodo;
+    }
+
+    #plano {
+        grid-area: plano;
+    }
+
+    #escolha-periodo {
+        grid-area: toggle;
+    }
+    
+    #escolha-periodo {
+        grid-template-columns: 90px 60px 90px 90px;
+        margin-left: 100px;
+    }
+
+    #escolha-periodo #desconto::after {
+        content: " desconto";
+    }
+
+    #beneficios {
+        display: grid;
+        grid-template-rows: 150px;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #beneficios li {
+        font-size: 1.1em;
+    }
+
 }
