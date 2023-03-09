@@ -41,7 +41,7 @@ function inserePrecoEPeriodo() {
     retornaPreco(valorRange);
     retornaPeriodo();
     
-    precoPeriodo.textContent = `${simboloMoeda} ${preco.toFixed(2)} / ${periodo}`;
+    precoPeriodo.innerHTML = `<span id= "preco">${simboloMoeda} ${preco.toFixed(2)}</span> <span id= "periodo">/ ${periodo}</span>`;
     
     tipoPlano.addEventListener("click", function () { 
         
@@ -49,6 +49,8 @@ function inserePrecoEPeriodo() {
         retornaPeriodo();
     
         precoPeriodo.textContent = `${simboloMoeda} ${preco.toFixed(2)} / ${periodo}`;
+
+        precoPeriodo.innerHTML = `<span id= "preco">${simboloMoeda} ${preco.toFixed(2)}</span> <span id= "periodo">/ ${periodo}</span>`;
      
     })
         
