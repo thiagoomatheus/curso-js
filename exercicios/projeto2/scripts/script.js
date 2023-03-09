@@ -1,13 +1,13 @@
 let range = document.querySelector("#escolha-plano input[type= range]");
 let valorRange = 3;
-let pageview = document.querySelector("#pageview");
+let pageview = document.querySelector("#pageview p");
 let tipoPlano = document.querySelector("#periodo-plano");
 let preco = 0;
 let periodo = "mês";
 let precoPeriodo = document.querySelector("#preco-periodo")
 const simboloMoeda = "R$";
 
-
+inserePlano()
 inserePrecoEPeriodo()
 
 range.addEventListener("input", function () {
