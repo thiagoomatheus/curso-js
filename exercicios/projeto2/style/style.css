@@ -62,7 +62,7 @@ The designs were created to the following widths:
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: var(--Manrope);
 }
 
@@ -92,9 +92,14 @@ main header {
     text-align: center;
     background: url(../images/pattern-circles.svg) center center no-repeat;
     display: grid;
-    grid-template-rows: 30px 20px 20px;
+    grid-template-rows: 30px 50px;
     align-content: space-around;
     padding-top: 30px;
+}
+
+#subtitulos {
+    display: grid;
+    row-gap: 10px;
 }
 
 main header h1 {
@@ -281,24 +286,13 @@ main header h1 {
         grid-template-rows: 170px 420px;
     }
 
-    #titulo {
-        grid-area: titulo;
-    }
-    
-    #p1 {
-        grid-area: p1;
-    }
-    
-    #p2 {
-        grid-area: p2;
-    }
-
     main header {
         grid-template-rows: 70px 25px;
-        grid-template-areas: 
-        "titulo titulo"
-        "p1 p2";
         row-gap: 20px;
+    }
+
+    #subtitulos {
+        display: block;
     }
 
     main header h1 {
