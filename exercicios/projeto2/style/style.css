@@ -303,6 +303,10 @@ main header h1 {
         font-size: 1.2em;
     }
 
+    #planos {
+        grid-template-rows: 230px 150px;
+    }
+
     #pageview {
         grid-area: pageview;
     }
@@ -322,7 +326,7 @@ main header h1 {
     #escolha-plano {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 70px 40px 40px;
+        grid-template-rows: 60px 40px 30px;
         grid-template-areas: 
         "pageview preco"
         "slider slider"
