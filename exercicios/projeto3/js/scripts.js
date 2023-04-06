@@ -4,6 +4,14 @@ const loadingElement = document.querySelector("#loading");
 
 const postsConatiner = document.querySelector("#posts-container");
 
+const postPage = document.querySelector("#post")
+const postContainer = document.querySelector("#posts-container")
+const commentsContainer = document.querySelector("#comments-container")
+
+const urlSearch = new URLSearchParams(window.location.search);
+
+const postId = urlSearch.get("id");
+
 async function getAllPosts() {
     const resposnse = await fetch(url);
 
@@ -21,7 +29,7 @@ async function getAllPosts() {
         title.textContent = post.title;
         body.textContent = post.body;
         link.textContent = "Ler";
-        link.setAttribute("href", `/post.html?id=?${post.id}`)
+        link.setAttribute("href", `/exercicios/projeto3/post.html?id=?${post.id}`)
 
         div.appendChild(title);
         div.appendChild(body);
@@ -32,4 +40,25 @@ async function getAllPosts() {
     })
 }
 
-getAllPosts()
+async function getPost(id) {
+    const [resposnsePost, resposnseComment] = await Promise.all ([
+        fetch(`${url}/${id}`),
+        fetch(`${url}/${id}/comments`)
+    ])
+
+    const dataPost = await resposnsePost.json();
+
+    const dataComment = await resposnseComment.json();
+
+    loadingElement.classList.add("hide");
+
+    postPage.classList.remove("hide")
+
+}
+
+if (!postId) {
+    getAllPosts()
+}
+else {
+    getPost(postId)
+}
